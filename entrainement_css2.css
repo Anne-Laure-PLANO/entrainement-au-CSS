@@ -1,0 +1,136 @@
+/*oeil normal : */
+.oeil {
+    display:flex;
+    flex-wrap: nowrap;
+    gap:5px;
+    height:200px;
+    width:200px;
+    border:2px solid orange;
+    border-radius: 50% 50% 50% 50%;
+    background-color:rgb(238, 229, 111);
+    margin-top:30px;
+    margin-left:30px;
+}
+.droit{
+    border: 2px solid black;
+    background-color:rgb(209, 213, 216);
+    height:75px;
+    width:50px;
+    border-radius:51% 49% 51% 49% / 51% 51% 49% 49% ;
+}
+
+.gauche{
+    border: 2px solid black;
+    background-color:rgb(209, 213, 216);
+    height:75px;
+    width:50px;
+    border-radius:51% 49% 51% 49% / 51% 51% 49% 49% ;
+}
+.pupille{
+    border: 7px solid blue;
+    border-radius:51% 49% 51% 49% / 51% 51% 49% 49% ;
+    background-color:black;
+    height:20px;
+    width:20px;
+    margin:auto;
+}
+
+
+.droit_a{ /*son oeil droit à lui*/
+    display:none;
+    height:0;
+    width:0;
+    border-radius:initial;
+    border:initial;
+    background : transparent;
+    border-left:0px solid transparent;
+    border-right:55px solid transparent;
+    border-bottom:55px solid red;
+    padding-top:20px;
+}
+.gauche_a{
+    display:none;
+    height:0;
+    width:0;
+    border-radius:initial;
+    border:initial;
+    background : transparent;
+    border-left:55px solid transparent;
+    border-right:0px solid transparent;
+    border-bottom:55px solid red;
+    padding-top:20px;
+
+}
+.pupille_ag{
+    display:none;
+    position:absolute;
+    top:105px;
+    left:85px;
+    height:28px;
+    width:8px;
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    border: 2px solid black;
+    background:black;
+
+}
+
+.pupille_ad{
+    display:none;
+    position:absolute;
+    top:105px;
+    left:187px;
+    height:28px;
+    width:8px;
+    border: 2px solid black;
+    background:black;
+    border-radius:50% 50% 50% 50% / 50% 50% 50% 50%;
+    margin:auto;
+}
+
+/*actions : */
+.oeil:hover {
+    .droit, .gauche{
+    display:none;
+    }
+    .droit_a, .gauche_a,.pupille_ad, .pupille_ag, .bouche_angry_d, .bouche_angry_g{
+    display:flex; 
+}
+}
+
+
+.bouche_contente {
+    position:absolute;
+    left: 100px;
+    top: 160px;
+    height: 40px;
+    width:80px;
+    border:2px solid black;
+    background-color: red;
+    border-radius:49% 51% 51% 49% / 0% 0% 100% 100% ;
+
+}
+
+.bouche_angry_d {
+    display:none;
+    position:absolute;
+    top:162px;
+    left: 110px;
+    height:0px;
+    width: 0px;
+    background-color: transparent;
+    border-left:7px solid transparent;
+    border-right:7px solid transparent;
+    border-top:15px solid white;
+}
+.bouche_angry_g {
+    display:none;
+    position:absolute;
+    top:162px;
+    left: 160px;
+    height:0px;
+    width: 0px;
+    background-color: transparent;
+    border-left:7px solid transparent;
+    border-right:7px solid transparent;
+    border-top:15px solid white;
+}
